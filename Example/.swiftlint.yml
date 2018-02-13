@@ -1,0 +1,125 @@
+disabled_rules: # rule identifiers to exclude from running
+    - conditional_binding_cascade
+    - force_cast
+    - legacy_constant
+    - legacy_constructor
+    - line_length
+    - nesting
+    - todo
+    - trailing_whitespace
+    - type_name
+    - variable_name
+    - cyclomatic_complexity
+    - unused_closure_parameter
+    - force_https
+    #- control_statement
+
+opt_in_rules:
+    - array_init
+    - closure_spacing
+    - contains_over_first_not_nil
+    - explicit_init
+    - extension_access_modifier
+    - fatal_error_message
+    - first_where
+    - implicit_return
+    - joined_default_parameter
+    - let_var_whitespace
+    - literal_expression_end_indentation
+    - no_grouping_extension
+    - operator_usage_whitespace
+    - overridden_super_call
+    - prohibited_super_call
+    - quick_discouraged_call
+    - sorted_imports
+    #- switch_case_on_newline
+    - vertical_parameter_alignment_on_call
+    #- number_separator
+    #- trailing_closure
+    # - attributes
+    #- closure_end_indentation
+    #- redundant_nil_coalescing
+    #- multiline_parameters
+    #- unneeded_parentheses_in_closure_argument
+    #- force_unwrapping
+    #- object_literal
+    #- implicitly_unwrapped_optional
+    #- multiline_arguments
+    #- empty_count
+    #- missing_docs
+
+included: # paths to include during linting. `--path` is ignored if present.
+    - ../ASCommon
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Carthage
+
+# These properties are marked as error by default.
+force_try: warning
+
+file_length:
+    warning: 500
+    error: 700
+
+function_body_length:
+    warning: 150
+    error: 200
+
+type_body_length:
+    warning: 300
+    error: 350
+
+function_parameter_count:
+    warning: 10
+    error: 15
+
+line_length:
+    warning: 100
+    error: 120
+
+large_tuple:
+    warning: 4
+    error: 5
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+
+custom_rules:
+    comments_space: # From https://github.com/brandenr/swiftlintconfig
+        name: "Space After Comment"
+        regex: "(^ *//\\w+)"
+        message: "There should be a space after //"
+        severity: warning
+    
+    #force_https: # From https://github.com/Twigz/Game
+    #        name: "Force HTTPS over HTTP"
+    #       regex: "((?i)http(?!s))"
+    #        match_kinds: string
+    #        message: "HTTPS should be favored over HTTP"
+    #severity: warning
+    
+    double_space: # From https://github.com/IBM-Swift/Package-Builder
+        include: "*.swift"
+        name: "Double space"
+        regex: "([a-z,A-Z] \\s+)"
+        message: "Double space between keywords"
+        match_kinds: keyword
+        severity: warning
+    
+    mark_newline:
+        include: "*.swift"
+        name: "MARK new line"
+        regex: "(^ *\\/\\/ MARK:\ [ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!-]*\n *(?!(?:\\}|return))\\S+)"
+        message: "// MARK: should have new line after"
+        severity: warning
+    
+    empty_line_after_super:
+        name: "Empty Line After Super"
+        regex: "(^ *super\\.[ a-zA-Z0-9=?.\\(\\)\\{\\}:,><!]*\n *(?!(?:\\}|return))\\S+)"
+        message: "There should be an empty line after super"
+        severity: warning
+    
+    new_line_between_import:
+        name: "New line between import"
+        regex: "import(.*?)\n\n+import"
+        message: "No new line between import"
+        severity: warning

@@ -1,0 +1,6 @@
+framework module ASCommon {
+  umbrella header "ASCommon-umbrella.h"
+
+  export *
+  module * { export * }
+}

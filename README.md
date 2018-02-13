@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/ASCommon.svg?style=flat)](http://cocoapods.org/pods/ASCommon)
 [![Platform](https://img.shields.io/cocoapods/p/ASCommon.svg?style=flat)](http://cocoapods.org/pods/ASCommon)
 
+ASCommon groups reusable code used during projects development.
+
+This framework contains:
++ Extensions
++ Protocols
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
