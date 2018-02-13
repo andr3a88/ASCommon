@@ -29,7 +29,7 @@ pod 'ASCommon'
 
 ## Author
 
-andr3a88, andrea.stevanato@ennova-research.com
+andr3a88, runner_corsa@msn.com
 
 ## License
 
