@@ -12,6 +12,11 @@ import ASCommon
 
 class CommonsTests: XCTestCase {
 
+    func testClearHTTPCookieStorage() {
+        HTTPCookieStorage.shared.clear()
+        XCTAssertTrue(HTTPCookieStorage.shared.cookies!.isEmpty)
+    }
+    
     func testSequenceSum() {
         XCTAssert([1,-1,10,22,-20,50].sum == 62)
     }

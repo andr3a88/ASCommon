@@ -7,6 +7,16 @@
 
 import Foundation
 
+// MARK: HTTPCookieStorage
+
+public extension HTTPCookieStorage {
+
+    public func clear() {
+        guard let cookies = self.cookies else { return }
+        cookies.forEach { self.deleteCookie($0) }
+    }
+}
+
 // MARK: Array
 
 public extension Sequence where Element: Numeric {
