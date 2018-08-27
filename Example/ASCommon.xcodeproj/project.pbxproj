@@ -14,6 +14,7 @@
 		657ACB97200900670010A9BF /* DoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ACB96200900670010A9BF /* DoubleTests.swift */; };
 		657ACB9F200901DF0010A9BF /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ACB9E200901DF0010A9BF /* LocaleTests.swift */; };
 		657ACBA5200903460010A9BF /* CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ACBA4200903460010A9BF /* CommonsTests.swift */; };
+		65D44E2D21345154003F2479 /* UIKitExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D44E2C21345154003F2479 /* UIKitExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		657ACB96200900670010A9BF /* DoubleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTests.swift; sourceTree = "<group>"; };
 		657ACB9E200901DF0010A9BF /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
 		657ACBA4200903460010A9BF /* CommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonsTests.swift; sourceTree = "<group>"; };
+		65D44E2C21345154003F2479 /* UIKitExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensionsTests.swift; sourceTree = "<group>"; };
 		AD7716F8E2456FA1399A3706 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C68ADC53AD2EBC9D34AEC26A /* Pods_ASCommon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASCommon_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9996C758B7C517816112CCE /* Pods-ASCommon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASCommon_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASCommon_Tests/Pods-ASCommon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				657ACB96200900670010A9BF /* DoubleTests.swift */,
 				657ACB9E200901DF0010A9BF /* LocaleTests.swift */,
 				607FACEB1AFB9204008FA782 /* StringTests.swift */,
+				65D44E2C21345154003F2479 /* UIKitExtensionsTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -262,6 +265,7 @@
 			files = (
 				657ACBA5200903460010A9BF /* CommonsTests.swift in Sources */,
 				657ACB97200900670010A9BF /* DoubleTests.swift in Sources */,
+				65D44E2D21345154003F2479 /* UIKitExtensionsTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* StringTests.swift in Sources */,
 				657ACB9F200901DF0010A9BF /* LocaleTests.swift in Sources */,
 			);

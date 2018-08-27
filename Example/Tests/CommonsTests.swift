@@ -54,4 +54,8 @@ class CommonsTests: XCTestCase {
         let newSize = size.sizeByDelta(dw: 50, dh: 100)
         XCTAssert(newSize == CGSize(width: 150, height: 200))
     }
+
+    func testStaticStringURL() {
+        XCTAssertNotNil(URL(staticString: "https://api.github.com"))
+    }
 }

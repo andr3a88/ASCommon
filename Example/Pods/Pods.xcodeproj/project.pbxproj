@@ -17,6 +17,7 @@
 		657ACBA1200902BC0010A9BF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ACBA0200902BC0010A9BF /* Device.swift */; };
 		657ACBA32009032A0010A9BF /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657ACBA22009032A0010A9BF /* Commons.swift */; };
 		65B82D8B202B17F6009C3E19 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B82D8A202B17F6009C3E19 /* UIKitExtensions.swift */; };
+		65D44E2F213452C9003F2479 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D44E2E213452C9003F2479 /* MKMapView.swift */; };
 		D85AE69200E6EB8B3A272EE16CE918E4 /* Pods-ASCommon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E45B0F9037D273853E5F1F6BB60EF8 /* Pods-ASCommon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2E55B32AE7ED2899E27E709E0658322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F3E78B887DE6644F08182F9F82706382 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -48,6 +49,7 @@
 		657ACBA0200902BC0010A9BF /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		657ACBA22009032A0010A9BF /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		65B82D8A202B17F6009C3E19 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		65D44E2E213452C9003F2479 /* MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6DAEAAB699C150175EAAC2C6AE0C72E7 /* ASCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASCommon-dummy.m"; sourceTree = "<group>"; };
 		72E45B0F9037D273853E5F1F6BB60EF8 /* Pods-ASCommon_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ASCommon_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				657ACB8F2008FC2D0010A9BF /* Localizable.swift */,
 				657ACB7F2008F5570010A9BF /* String.swift */,
 				65B82D8A202B17F6009C3E19 /* UIKitExtensions.swift */,
+				65D44E2E213452C9003F2479 /* MKMapView.swift */,
 			);
 			name = Classes;
 			path = ASCommon/Classes;
@@ -308,6 +311,7 @@
 				657ACB902008FC2D0010A9BF /* Localizable.swift in Sources */,
 				657ACBA1200902BC0010A9BF /* Device.swift in Sources */,
 				657ACB95200900470010A9BF /* Double.swift in Sources */,
+				65D44E2F213452C9003F2479 /* MKMapView.swift in Sources */,
 				1ABAA036181661AC54D9F4F8E8E04622 /* ASCommon-dummy.m in Sources */,
 				657ACB9D200901C70010A9BF /* Locale.swift in Sources */,
 			);

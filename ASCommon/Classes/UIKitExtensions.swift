@@ -37,12 +37,19 @@ public extension UINavigationController {
 
 public extension UIScrollView {
 
-    /// Current device orientation
+    /// Returns the device orientation
+    /// - NOTE: **portrait**: Device oriented vertically, home button on the bottom.
+    /// **portraitUpsideDown**: Device oriented vertically, home button on the top.
+    /// **landscapeLeft**: Device oriented horizontally, home button on the right.
+    /// **landscapeRight**: Device oriented horizontally, home button on the left.
+    /// **faceUp**: Device oriented flat, face up.
+    /// **faceDown**: Device oriented flat, face down.
     var currentDeviceOrientation: UIDeviceOrientation {
         return UIDevice.current.orientation
     }
 
-    /// Current device orientation
+    /// The current orientation of the app's status bar.
+    /// - NOTE: Values: **unknown**, **portrait**, **portraitUpsideDown**, **landscapeLeft**, **landscapeRight**
     var currentOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
     }
@@ -50,6 +57,11 @@ public extension UIScrollView {
     /// Current device orientation
     var currentScreen: UIScreen {
         return UIScreen.main
+    }
+
+    /// Sets the content offset to top
+    func scrollToTop(animated: Bool = true) {
+        setContentOffset(CGPoint(x: 0, y: -contentInset.top), animated: animated)
     }
 }
 
@@ -125,7 +137,7 @@ public extension UIViewController {
     }
 }
 
-extension UIImage {
+public extension UIImage {
 
     /// Image aspect ratio
     var aspectRatio: CGFloat {
@@ -133,11 +145,36 @@ extension UIImage {
     }
 }
 
-extension UIGestureRecognizer {
+public extension UIGestureRecognizer {
 
     /// Cancel a gesture
     func cancel() {
         isEnabled = false
         isEnabled = true
+    }
+}
+
+public extension UITextField {
+
+    // MARK: Properties
+
+    /// Checks if text field is empty.
+    var isEmpty: Bool {
+        return text?.isEmpty == true
+    }
+
+    /// Checks if the textField text is a valid email
+    var hasValidEmail: Bool {
+        return text?.isValidEmail == true
+    }
+
+    // MARK: Methods
+
+    /// Set the placeholder text color
+    ///
+    /// - Parameter color: The color
+    func setPlaceHolderTextColor(_ color: UIColor) {
+        guard let placeholder = placeholder, !placeholder.isEmpty else { return }
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: color])
     }
 }

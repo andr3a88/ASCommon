@@ -11,13 +11,13 @@ import Foundation
 
 public extension HTTPCookieStorage {
 
-    public func clear() {
+    func clear() {
         guard let cookies = self.cookies else { return }
         cookies.forEach { self.deleteCookie($0) }
     }
 }
 
-// MARK: Array
+// MARK: Sequence
 
 public extension Sequence where Element: Numeric {
 
@@ -96,5 +96,42 @@ public extension CGSize {
     /// - Returns: new CGSize
     func sizeByDelta(dw: CGFloat, dh: CGFloat) -> CGSize {
         return CGSize(width: self.width + dw, height: self.height + dh)
+    }
+}
+
+// MARK: URL
+
+public extension URL {
+
+    init(staticString: StaticString) {
+        self.init(string: "\(staticString)")!
+    }
+}
+
+public extension Int {
+
+    /// Double type
+    var double: Double {
+        return Double(self)
+    }
+
+    /// Float type
+    var float: Float {
+        return Float(self)
+    }
+
+    #if canImport(CoreGraphics)
+    /// Float CGFloat
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
+    #endif
+
+    /// Returns random number up to
+    ///
+    /// - Parameter max: The max value
+    /// - Returns: The randon number
+    static func random(upTo max: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(max)))
     }
 }
