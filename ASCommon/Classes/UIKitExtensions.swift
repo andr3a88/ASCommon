@@ -5,7 +5,7 @@
 //  Created by Andrea on 07/02/2018.
 //
 
-import Foundation
+import UIKit
 
 public extension UINavigationController {
 
@@ -13,24 +13,51 @@ public extension UINavigationController {
     ///
     /// - Parameters:
     ///   - viewController: The view controller
-    ///   - animationDuration: The animation duration (default 0.3)
-    func pushFadeViewController(viewController: UIViewController, duration: CFTimeInterval = 0.2, type: String = kCATransitionFade) {
+    ///   - animationDuration: The animation duration (default 0.2)
+    func pushFadeViewController(viewController: UIViewController, duration: CFTimeInterval = 0.2) {
         let transition = CATransition()
         transition.duration = duration
-        transition.type = type
+        transition.type = kCATransitionFade
         self.view.layer.add(transition, forKey: nil)
+        self.pushViewController(viewController, animated: false)
+    }
+
+    /// Push the view controller with present animation
+    ///
+    /// - Parameters:
+    ///   - viewController: The view controller
+    ///   - animationDuration: The animation duration (default 0.25)
+    func pushPresentViewController(viewController: UIViewController, duration: CFTimeInterval = 0.25) {
+        let transition = CATransition()
+        transition.duration = duration
+        transition.type = kCATransitionMoveIn
+        transition.subtype = kCATransitionFromTop
+        self.view.layer.add(transition, forKey: kCATransition)
         self.pushViewController(viewController, animated: false)
     }
 
     /// Pop the view controller with fade animation
     ///
     /// - Parameters:
-    ///   - animationDuration: The animation duration (default 0.3)
-    func popFadeViewController(duration: CFTimeInterval = 0.2, type: String = kCATransitionFade) {
+    ///   - animationDuration: The animation duration (default 0.2)
+    func popFadeViewController(duration: CFTimeInterval = 0.2) {
         let transition = CATransition()
         transition.duration = duration
-        transition.type = type
+        transition.type = kCATransitionFade
         self.view.layer.add(transition, forKey: nil)
+        self.popViewController(animated: false)
+    }
+
+    /// Pop the view controller with dismiss animation
+    ///
+    /// - Parameters:
+    ///   - animationDuration: The animation duration (default 0.25)
+    func popDismissViewController(duration: CFTimeInterval = 0.25) {
+        let transition = CATransition()
+        transition.duration = duration
+        transition.type = kCATransitionReveal
+        transition.subtype = kCATransitionFromBottom
+        self.view.layer.add(transition, forKey: kCATransition)
         self.popViewController(animated: false)
     }
 }
