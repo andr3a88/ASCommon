@@ -32,7 +32,7 @@ public extension UIDevice {
     }
     
     /// Iphone screen type
-    public var screenType: ScreenType {
+    var screenType: ScreenType {
         guard iPhone else { return .unknown }
         switch UIScreen.main.nativeBounds.height {
         case 960:
@@ -56,7 +56,7 @@ public extension UIDevice {
     }
     
     /// Static value on which save device name
-    public static var deviceName: String? {
+    static var deviceName: String? {
         get {
             guard let value = objc_getAssociatedObject(self, &AssociatedKeys.deviceName) as? String else {
                 return nil
@@ -70,7 +70,7 @@ public extension UIDevice {
     
     /// Model name
     /// Reference: https://www.theiphonewiki.com/wiki/Models
-    public static var modelName: String {
+    static var modelName: String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -123,52 +123,52 @@ public extension UIDevice {
     }
     
     /// Check if current device is iPhone4
-    public static var isIphone4: Bool {
+    static var isIphone4: Bool {
         return modelName == "iPhone 4s" || modelName == "iPhone 4" || UIDevice.isSimulatorIPhone4
     }
     
     /// Check if current device is iPhone5
-    public static var isIphone5: Bool {
+    static var isIphone5: Bool {
         return modelName == "iPhone 5" || modelName == "iPhone 5c" || modelName == "iPhone 5s" || UIDevice.isSimulatorIPhone5
     }
     
     /// Check if current device is iPhone6
-    public static var isIphone6: Bool {
+    static var isIphone6: Bool {
         return modelName == "iPhone 6" || UIDevice.isSimulatorIPhone6
     }
     
     /// Check if current device is iPhone6Plus
-    public static var isIphone6Plus: Bool {
+    static var isIphone6Plus: Bool {
         return modelName == "iPhone 6 Plus" || UIDevice.isSimulatorIPhone6Plus
     }
     
     /// Check if current device is iPhone7
-    public static var isIphone7: Bool {
+    static var isIphone7: Bool {
         return modelName == "iPhone 7" || UIDevice.isSimulatorIPhone7
     }
     
     /// Check if current device is iPhone7plus
-    public static var isIphone7Plus: Bool {
+    static var isIphone7Plus: Bool {
         return modelName == "iPhone 7 Plus" || UIDevice.isSimulatorIPhone7Plus
     }
     
     /// Check if current device is iPhone8
-    public static var isIphone8: Bool {
+    static var isIphone8: Bool {
         return modelName == "iPhone 8" || UIDevice.isSimulatorIPhone8
     }
     
     /// Check if current device is iPhone8plus
-    public static var isIphone8Plus: Bool {
+    static var isIphone8Plus: Bool {
         return modelName == "iPhone 8 Plus" || UIDevice.isSimulatorIPhone8Plus
     }
     
     /// Check if current device is iPhone X
-    public static var isIphoneX: Bool {
+    static var isIphoneX: Bool {
         return modelName == "iPhone X" || UIDevice.isSimulatorIPhoneX
     }
     
     /// Check if current device is iPas
-    public static var isIpad: Bool {
+    static var isIpad: Bool {
         if UIDevice.current.model.range(of: "iPad") != nil {
             return true
         }
@@ -176,7 +176,7 @@ public extension UIDevice {
     }
     
     /// Check if current device is iPhone
-    public static var isIphone: Bool {
+    static var isIphone: Bool {
         return !self.isIpad
     }
     
@@ -186,47 +186,47 @@ public extension UIDevice {
     }
     
     /// Check if current device is iPhone4S (and earlier) relying on screen height
-    public static var isSimulatorIPhone4: Bool {
+    static var isSimulatorIPhone4: Bool {
         return UIDevice.isSimulatorWithScreenHeigth(480)
     }
     
     /// Check if current device is iPhone5 relying on screen height
-    public static var isSimulatorIPhone5: Bool {
+    static var isSimulatorIPhone5: Bool {
         return UIDevice.isSimulatorWithScreenHeigth(568)
     }
     
     /// Check if current device is iPhone6 relying on screen height
-    public static var isSimulatorIPhone6: Bool {
+    static var isSimulatorIPhone6: Bool {
         return UIDevice.isSimulatorWithScreenHeigth(667)
     }
     
     /// Check if current device is iPhone6 Plus relying on screen height
-    public static var isSimulatorIPhone6Plus: Bool {
+    static var isSimulatorIPhone6Plus: Bool {
         return UIDevice.isSimulatorWithScreenHeigth(736)
     }
     
     /// Check if current device is iPhone X
-    public static var isSimulatorIPhoneX: Bool {
+    static var isSimulatorIPhoneX: Bool {
         return UIDevice.isSimulatorWithScreenHeigth(812)
     }
     
     /// Check if current device is iPhone7 relying on screen height (== iphone 6)
-    public static var isSimulatorIPhone7: Bool {
+    static var isSimulatorIPhone7: Bool {
         return UIDevice.isSimulatorIPhone6
     }
     
     /// Check if current device is iPhone7 Plus relying on screen height (== iphone 6 plus)
-    public static var isSimulatorIPhone7Plus: Bool {
+    static var isSimulatorIPhone7Plus: Bool {
         return UIDevice.isSimulatorIPhone6Plus
     }
     
     /// Check if current device is iPhone8 relying on screen height (== iphone 6)
-    public static var isSimulatorIPhone8: Bool {
+    static var isSimulatorIPhone8: Bool {
         return UIDevice.isSimulatorIPhone6
     }
     
     /// Check if current device is iPhone8 Plus relying on screen height (== iphone 6 plus)
-    public static var isSimulatorIPhone8Plus: Bool {
+    static var isSimulatorIPhone8Plus: Bool {
         return UIDevice.isSimulatorIPhone6Plus
     }
     

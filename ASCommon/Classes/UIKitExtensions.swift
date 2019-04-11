@@ -14,7 +14,7 @@ public extension UINavigationController {
     /// - Parameters:
     ///   - viewController: The view controller
     ///   - animationDuration: The animation duration (default 0.3)
-    func pushFadeViewController(viewController: UIViewController, duration: CFTimeInterval = 0.2, type: String = kCATransitionFade) {
+    func pushFadeViewController(viewController: UIViewController, duration: CFTimeInterval = 0.2, type: CATransitionType = CATransitionType.fade) {
         let transition = CATransition()
         transition.duration = duration
         transition.type = type
@@ -26,7 +26,7 @@ public extension UINavigationController {
     ///
     /// - Parameters:
     ///   - animationDuration: The animation duration (default 0.3)
-    func popFadeViewController(duration: CFTimeInterval = 0.2, type: String = kCATransitionFade) {
+    func popFadeViewController(duration: CFTimeInterval = 0.2, type: CATransitionType = CATransitionType.fade) {
         let transition = CATransition()
         transition.duration = duration
         transition.type = type
@@ -96,9 +96,9 @@ public extension UIViewController {
     ///
     /// - Parameter child: The child view controller
     func add(_ child: UIViewController) {
-        addChildViewController(child)
+        addChild(child)
         view.addSubview(child.view)
-        child.didMove(toParentViewController: self)
+        child.didMove(toParent: self)
     }
 
     /// Remove the view controller from the parent
@@ -107,8 +107,8 @@ public extension UIViewController {
             return
         }
 
-        willMove(toParentViewController: nil)
-        removeFromParentViewController()
+        willMove(toParent: nil)
+        removeFromParent()
         view.removeFromSuperview()
     }
 

@@ -1,5 +1,4 @@
 disabled_rules: # rule identifiers to exclude from running
-    - conditional_binding_cascade
     - force_cast
     - legacy_constant
     - legacy_constructor
@@ -10,9 +9,6 @@ disabled_rules: # rule identifiers to exclude from running
     - type_name
     - variable_name
     - cyclomatic_complexity
-    - unused_closure_parameter
-    - force_https
-    #- control_statement
 
 opt_in_rules:
     - array_init
@@ -32,21 +28,8 @@ opt_in_rules:
     - prohibited_super_call
     - quick_discouraged_call
     - sorted_imports
-    #- switch_case_on_newline
     - vertical_parameter_alignment_on_call
-    #- number_separator
-    #- trailing_closure
-    # - attributes
-    #- closure_end_indentation
-    #- redundant_nil_coalescing
-    #- multiline_parameters
-    #- unneeded_parentheses_in_closure_argument
-    #- force_unwrapping
-    #- object_literal
-    #- implicitly_unwrapped_optional
-    #- multiline_arguments
-    #- empty_count
-    #- missing_docs
+
 
 included: # paths to include during linting. `--path` is ignored if present.
     - ../ASCommon
@@ -77,9 +60,6 @@ line_length:
     warning: 100
     error: 120
 
-large_tuple:
-    warning: 4
-    error: 5
 
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
 
@@ -89,14 +69,6 @@ custom_rules:
         regex: "(^ *//\\w+)"
         message: "There should be a space after //"
         severity: warning
-    
-    #force_https: # From https://github.com/Twigz/Game
-    #        name: "Force HTTPS over HTTP"
-    #       regex: "((?i)http(?!s))"
-    #        match_kinds: string
-    #        message: "HTTPS should be favored over HTTP"
-    #severity: warning
-    
     double_space: # From https://github.com/IBM-Swift/Package-Builder
         include: "*.swift"
         name: "Double space"
