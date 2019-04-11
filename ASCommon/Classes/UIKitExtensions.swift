@@ -13,7 +13,7 @@ public extension UINavigationController {
     ///
     /// - Parameters:
     ///   - viewController: The view controller
-    ///   - animationDuration: The animation duration (default 0.3)
+    ///   - animationDuration: The animation duration (default 0.2)
     func pushFadeViewController(viewController: UIViewController, duration: CFTimeInterval = 0.2, type: CATransitionType = CATransitionType.fade) {
         let transition = CATransition()
         transition.duration = duration
@@ -25,7 +25,7 @@ public extension UINavigationController {
     /// Pop the view controller with fade animation
     ///
     /// - Parameters:
-    ///   - animationDuration: The animation duration (default 0.3)
+    ///   - animationDuration: The animation duration (default 0.2)
     func popFadeViewController(duration: CFTimeInterval = 0.2, type: CATransitionType = CATransitionType.fade) {
         let transition = CATransition()
         transition.duration = duration
