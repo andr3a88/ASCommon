@@ -21,6 +21,7 @@
 		D85AE69200E6EB8B3A272EE16CE918E4 /* Pods-ASCommon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E45B0F9037D273853E5F1F6BB60EF8 /* Pods-ASCommon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2E55B32AE7ED2899E27E709E0658322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F3E78B887DE6644F08182F9F82706382 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FCB663A8234B34EB00636413 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB663A7234B34EB00636413 /* DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C719059EC8AF28477754478736FA2D1E /* Pods-ASCommon_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ASCommon_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D8B1951E1894427B84948D3E9C1147F3 /* ASCommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASCommon-prefix.pch"; sourceTree = "<group>"; };
 		F40DBFE770151F8F28F693144E3809A9 /* Pods-ASCommon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASCommon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB663A7234B34EB00636413 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				657ACB7F2008F5570010A9BF /* String.swift */,
 				65B82D8A202B17F6009C3E19 /* UIKitExtensions.swift */,
 				65D44E2E213452C9003F2479 /* MKMapView.swift */,
+				FCB663A7234B34EB00636413 /* DateExtensions.swift */,
 			);
 			name = Classes;
 			path = ASCommon/Classes;
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B82D8B202B17F6009C3E19 /* UIKitExtensions.swift in Sources */,
+				FCB663A8234B34EB00636413 /* DateExtensions.swift in Sources */,
 				657ACB832008F5570010A9BF /* String.swift in Sources */,
 				657ACBA32009032A0010A9BF /* Commons.swift in Sources */,
 				657ACB902008FC2D0010A9BF /* Localizable.swift in Sources */,
