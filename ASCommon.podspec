@@ -1,10 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'ASCommon'
   s.version          = '0.1.0'
-  s.summary          = 'A collection of extensions and protocol  to boost your productivity'
+  s.summary          = 'Collection of extensions and protocol to boost your productivity'
   s.description      = <<-DESC
-A collection of extensions and protocol  to boost your productivity
-                       DESC
+
+  A Swift collection of extensions and protocol to boost your productivity
+
+  DESC
 
   s.homepage         = 'https://github.com/andr3a88/ASCommon'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -12,7 +14,8 @@ A collection of extensions and protocol  to boost your productivity
   s.source           = { :git => 'https://github.com/andr3a88/ASCommon.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/andrea_steva>'
 
-  s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'ASCommon/Classes/**/*'
 end

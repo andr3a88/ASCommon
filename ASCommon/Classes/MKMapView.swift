@@ -17,7 +17,7 @@ public extension MKMapView {
     ///   - span: The span
     ///   - animated: Animated
     func setRegion(coordinate: CLLocationCoordinate2D, span: CLLocationDistance = 3000, animated: Bool = true) {
-        let region = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: span, longitudinalMeters: span)
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: span, longitudinalMeters: span)
         self.setRegion(region, animated: animated)
     }
 
