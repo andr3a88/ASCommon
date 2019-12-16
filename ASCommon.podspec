@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'andr3a88' => 'runner_corsa@msn.com' }
   s.source           = { :git => 'https://github.com/andr3a88/ASCommon.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/andrea_steva>'
+  s.social_media_url = 'https://twitter.com/andrea_steva'
 
   s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
